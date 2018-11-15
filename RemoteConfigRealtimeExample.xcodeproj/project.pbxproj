@@ -35,8 +35,8 @@
 		9366C9C7446C40EFCB857460 /* Pods_RemoteConfigRealtimeExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteConfigRealtimeExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84DCA0A7C7D8AAE9F535C37 /* Pods-RemoteConfigRealtimeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteConfigRealtimeExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteConfigRealtimeExample/Pods-RemoteConfigRealtimeExample.debug.xcconfig"; sourceTree = "<group>"; };
 		D514F5F8219B3589008421AE /* RemoteConfigRealtimeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteConfigRealtimeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D514F5FB219B3589008421AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D514F5FD219B3589008421AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D514F5FB219B3589008421AE /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D514F5FD219B3589008421AE /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D514F600219B3589008421AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D514F602219B358C008421AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D514F605219B358C008421AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +45,7 @@
 		D514F610219B358C008421AE /* RemoteConfigRealtimeExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigRealtimeExampleTests.swift; sourceTree = "<group>"; };
 		D514F612219B358C008421AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D514F61B219B40CE008421AE /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		D514F621219B5572008421AE /* RemoteConfigRealtimeExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteConfigRealtimeExample.entitlements; sourceTree = "<group>"; };
 		DE14F9563E2FDFD39334FF35 /* Pods-RemoteConfigRealtimeExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteConfigRealtimeExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteConfigRealtimeExampleTests/Pods-RemoteConfigRealtimeExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +101,7 @@
 		D514F5FA219B3589008421AE /* RemoteConfigRealtimeExample */ = {
 			isa = PBXGroup;
 			children = (
+				D514F621219B5572008421AE /* RemoteConfigRealtimeExample.entitlements */,
 				D514F5FB219B3589008421AE /* AppDelegate.swift */,
 				D514F5FD219B3589008421AE /* ViewController.swift */,
 				D514F5FF219B3589008421AE /* Main.storyboard */,
@@ -184,6 +186,11 @@
 				TargetAttributes = {
 					D514F5F7219B3589008421AE = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D514F60B219B358C008421AE = {
 						CreatedOnToolsVersion = 10.1;
@@ -461,6 +468,7 @@
 			baseConfigurationReference = A84DCA0A7C7D8AAE9F535C37 /* Pods-RemoteConfigRealtimeExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfigRealtimeExample/RemoteConfigRealtimeExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5U649DS4Z;
 				INFOPLIST_FILE = RemoteConfigRealtimeExample/Info.plist;
@@ -481,6 +489,7 @@
 			baseConfigurationReference = 74E52E1A1CFA5807BC1E3B30 /* Pods-RemoteConfigRealtimeExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfigRealtimeExample/RemoteConfigRealtimeExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5U649DS4Z;
 				INFOPLIST_FILE = RemoteConfigRealtimeExample/Info.plist;
